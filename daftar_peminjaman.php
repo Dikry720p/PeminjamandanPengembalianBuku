@@ -45,5 +45,14 @@ $sqli = 'SELECT * FROM buku';
         <?php } ?>
     </table>
 </body>
+<br>
+<a href="daftar_buku.php">LIHAT DAFTAR BUKU</a>
+<br>
+<a href="peminjaman.php">PINJAM BUKU</a>
+<br>
+<a href="pengembalian.php">PENGEMBALIAN BUKU</a>
+<br>
+<a href="add_buku.php"> TAMBAH BUKU</a>
+<br>
 
 </html>
