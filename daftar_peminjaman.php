@@ -3,6 +3,7 @@ require 'database.php';
 
 $pdo = Database::connect();
 $sql = 'SELECT * FROM peminjaman';
+$sqli = 'SELECT * FROM buku';
 ?>
 
 <!DOCTYPE html>
@@ -24,8 +25,9 @@ $sql = 'SELECT * FROM peminjaman';
             <th>Aksi</th>
         </tr>
         <?php foreach ($pdo->query($sql) as $row) { ?>
+            <?php foreach ($pdo->query($sqli) as $row2)  ?>
             <tr>
-                <td><?php echo $row['judul']; ?></td>
+                <td><?php echo $row2['judul']; ?></td>
                 <td><?php echo $row['nama_peminjam']; ?></td>
                 <td><?php echo $row['tanggal_peminjaman']; ?></td>
                 <td><?php echo $row['status_pengembalian']; ?></td>
